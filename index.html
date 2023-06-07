@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="fontawesome-free-6.4.0-web/css/all.min.css">
+        <script src="js/bootstrap.min.js"></script>
+        <script type="module" src="src/index.js"></script>
+        <script src="fontawesome-free-6.4.0-web/js/fontawesome.min.js"></script>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div id="panel" class="form-group col-sm-12">
+                    <div class="card card-default ">
+                        <div class="card-body pb-2">
+                            <div class="row pt-4">
+                                <div class="form-group col-sm-6">
+                                    <div class="input-group mb-3">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="tituloFind" placeholder="titulo">
+                                            <label for="tituloFind">titulo</label>
+                                        </div>
+                                        <button id="btnFind" class="btn btn-outline-secondary" type="button">
+                                            <i class="fas fa-search"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-sm-12">
+                                    <div id="containerTask" class="list-group">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row pt-4">
+                                <div class="form-group col-sm-12">
+                                    <button id="btnCompletarTarea" type="button" class="btn btn-outline-success float-end" >
+                                        Completar tarea
+                                    </button>
+                                    <button id="btnAbrirAgregarTarea" type="button" class="btn btn-outline-primary float-end" data-bs-toggle="modal" data-bs-target="#modalAgregarTarea">
+                                        Agregar tarea
+                                    </button>
+                                    <button id="btnEditar" type="button" class="btn btn-outline-warning float-end" data-bs-toggle="modal" data-bs-target="#modalEditarTarea">
+                                        Editar tarea
+                                    </button>
+                                    <button id="btnEliminar" type="button" class="btn btn-outline-danger float-end">
+                                        Eliminar tarea
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="modalAgregarTarea" tabindex="-1" aria-labelledby="modalAgregarTareaLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="modalAgregarTareaLabel">Agregar tarea</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <input id="titulo" name="titulo" class="form-control form-control-lg"
+                                   type="text" placeholder="Nombre" aria-label=".form-control-lg example">
+                            <input id="descripcion" name="descripcion" class="form-control form-control-lg"
+                                   type="text" placeholder="Descripcion" aria-label=".form-control-lg example">
+                            <input id="prioridad" name="prioridad" class="form-control form-control-lg"
+                                   type="text" placeholder="Prioridad" aria-label=".form-control-lg example">
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button id="btnGuardarTarea" type="button" class="btn btn-primary" data-bs-dismiss="modal">Guardar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="modalEditarTarea" tabindex="-1" aria-labelledby="modalAgregarTareaLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="modalEditarTareaLabel">Editar tarea</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <input id="editTitulo" name="editTitulo" class="form-control form-control-lg"
+                                   type="text" placeholder="Nombre" aria-label=".form-control-lg example">
+                            <input id="editDescripcion" name="editDescripcion" class="form-control form-control-lg"
+                                   type="text" placeholder="Descripcion" aria-label=".form-control-lg example">
+                            <input id="editPrioridad" name="editPrioridad" class="form-control form-control-lg"
+                                   type="text" placeholder="Prioridad" aria-label=".form-control-lg example">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button id="btnGuardarTareaEdit" type="button" class="btn btn-primary" data-bs-dismiss="modal">Guardar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "TodoMachine",
+  "version": "1.0.0",
+  "description": "tarea final de fundamentos javascript",
+  "dependencies": {},
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "author": "Raul Riquelme (r.alexander.riquelme@gmail.com)",
+  "license": "ISC",
+  "type": "module"
+}
